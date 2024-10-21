@@ -34,31 +34,31 @@ export function LangSwitcher() {
     <>
       <DropdownMenu>
         <DropdownMenuTrigger asChild className="hidden lg:flex">
-          <button className="inline-flex items-center">
+          <button className="inline-flex items-center text-white" >
             <span className="w-8 h-5 block bg-black me-2 relative text-xs md:text-md ">
               <Image
-                src={"/images/saudi.png"}
+                src={locale === 'en' ? "/images/malayalam-white-bg.jpg" : "/images/english-white-bg.png"}
                 className="object-cover"
                 fill
                 alt="sdfsdf"
               />
             </span>
-            العربية
+            {locale === 'ml'? 'English' : "മലയാളം"}
           </button>
         </DropdownMenuTrigger>
         <DropdownMenuContent className="w-56">
           <div className="self-stretch gap-1 flex mb-3">
             <button 
-              className={`text-white text-xs font-medium  w-full px-3.5 py-2 ${locale === 'en' ? 'bg-black' : 'bg-gray-200'} rounded`}
+              className={`text-xs font-medium  w-full px-3.5 py-2 ${locale === 'en' ? 'bg-black text-white' : 'bg-gray-200 text-black'} rounded`}
               onClick={() => onSelectChange('en')}
             >
               English
             </button>
             <button 
-              className={`text-white text-xs font-medium  w-full px-3.5 py-2 ${locale === 'ar' ? 'bg-black' : 'bg-gray-200'} rounded`}
-              onClick={() => onSelectChange('ar')}
+              className={` text-xs font-medium  w-full px-3.5 py-2 ${locale === 'ml' ? 'bg-black text-white' : 'bg-gray-200 text-black'} rounded`}
+              onClick={() => onSelectChange('ml')}
             >
-              العربية
+              മലയാളം
             </button>
           </div>
 
@@ -78,7 +78,7 @@ export function LangSwitcher() {
             </button>
           </DropdownMenuItem> */}
           <DropdownMenuItem>
-        <label className="flex items-center w-full cursor-pointer">
+        {/* <label className="flex items-center w-full cursor-pointer">
           <input
             type="radio"
             name="language"
@@ -99,7 +99,7 @@ export function LangSwitcher() {
               <div className="w-full h-full top-0 left-0 absolute bg-orange-600 rounded-full scale-75" />
             </div>
           </div>
-        </label>
+        </label> */}
       </DropdownMenuItem>
 
       </DropdownMenuContent>
@@ -116,7 +116,7 @@ export function LangSwitcher() {
                 alt="sdfsdf"
               />
             </span>
-            العربية
+            മലയാളം
           </button>
         </DrawerTrigger>
         <DrawerContent>
@@ -134,7 +134,7 @@ export function LangSwitcher() {
                     English
                   </button>
                   <button className="text-black text-xs font-medium w-full px-3.5 py-[9px] bg-gray-200 rounded">
-                    العربية
+                  മലയാളം
                   </button>
                 </div>
                 <div className="pb-6">
