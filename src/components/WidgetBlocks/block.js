@@ -1,5 +1,5 @@
 "use client"
-import { HOME_ABOUT, HOME_ACHIEVEMENTS, HOME_BANNER, HOME_CHOOSE, HOME_ISSUES, HOME_LEADERS, HOME_NEWS, HOME_STAT, DONATE_WIDGET, INNER_BANNER } from "@/constants/resources";
+import { HOME_ABOUT, HOME_ACHIEVEMENTS, HOME_BANNER, HOME_CHOOSE, HOME_ISSUES, HOME_LEADERS, HOME_NEWS, HOME_STAT, DONATE_WIDGET, INNER_BANNER, TIMELINE_WIDGET, CONVENER_WIDGET } from "@/constants/resources";
 import DefaultComponent from "./DefaultComponent";
 import HomeBanner from "@/widgets/HomeBanner";
 import HomeAbout from "@/widgets/HomeAbout";
@@ -11,6 +11,8 @@ import HomeLeaders from "@/widgets/HomeLeaders";
 import HomeNews from "@/widgets/HomeNews";
 import DonateWidget from "@/widgets/DonateWidget";
 import InnerBanner from "@/widgets/InnerBanner";
+import TimelineWidget from "@/widgets/TimelineWidget";
+import ConvenerWidget from "@/widgets/ConvenerWidget";
 
 
 const setComponent = (widget) => {
@@ -25,6 +27,8 @@ const setComponent = (widget) => {
     [HOME_NEWS]:HomeNews,
     [DONATE_WIDGET]:DonateWidget,
     [INNER_BANNER]:InnerBanner,
+    [TIMELINE_WIDGET]: TimelineWidget,
+    [CONVENER_WIDGET]: ConvenerWidget,
     default: DefaultComponent,
   };
   return components[widget.__component] || components["default"];

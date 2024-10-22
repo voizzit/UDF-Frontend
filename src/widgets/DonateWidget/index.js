@@ -17,7 +17,7 @@ export default function DonateWidget({data }) {
         <div className="grid grid-cols-12 items-center">
           <div className="col-span-12 lg:col-span-7">
             <h2 className=" text-3xl lg:text-6xl font-semibold  lg:leading-tight  bg-gradient-to-r from-[#fff]  to-[#5B95F9] bg-clip-text text-transparent font-condensed mb-4 lg:mb-0">
-              നിലപാടുകളുടെ നിശ്ചയദാർഢ്യം,  നയിക്കാൻ കരുത്തുറ്റ നേതൃത്വം
+              {data?.title}
             </h2>
           </div>
           <div className="col-span-12 lg:col-span-5">

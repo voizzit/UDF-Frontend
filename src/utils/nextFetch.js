@@ -10,9 +10,9 @@ const options = {
   }
 };
 
-const nextFetch = async (slug) => {
+const nextFetch = async (slug, lang) => {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}${slug}`,
+    `${process.env.NEXT_PUBLIC_BASE_URL}${slug}&locale=${lang}`,
     { options }
   );
 
