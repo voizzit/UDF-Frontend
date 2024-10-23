@@ -1,7 +1,7 @@
 "use client"
 import Image from "@/components/Image/image";
 
-export default function AboutChiefWidget({ data }) {
+export default function ConvenerWidget({ data }) {
   
   return (
     <section className={`overflow-hidden py-6 lg:py-11 bg-blue-600 min-h-[300px] lg:min-h-[548px] relative flex items-end`}>
