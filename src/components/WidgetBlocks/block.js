@@ -40,7 +40,7 @@ const Block = ({
   slug,
 }) => {
   const Widget = setComponent(widget);
-  console.log(widget.__component,"widgetwidgetwidget");
+  // console.log(widget.__component,"widgetwidgetwidget");
   return (
     <Widget
       data={widget}

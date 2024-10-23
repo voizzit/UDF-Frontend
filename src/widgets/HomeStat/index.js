@@ -6,12 +6,14 @@ export default function HomeStat({data}) {
     <section className={`overflow-hidden py-11 bg-blue-600`}>
       <div className="container">
         <div className="flex justify-between">
-          {data?.items && data.items.map((item)=>(
-            <div className="flex-col justify-start items-center inline-flex">
-              <div className="bg-gradient-to-r from-[#fff]  to-[#5B95F9] bg-clip-text text-transparent text-7xl font-semibold">{item.description}</div>
-              <div className=" text-center text-white/90 text-base font-normal  leading-7">{item.title}</div>
-            </div>
-          ))}
+          <>
+            {data?.items && data.items.map((item, index)=>(
+              <div key={index} className="flex-col justify-start items-center inline-flex">
+                <div className="bg-gradient-to-r from-[#fff]  to-[#5B95F9] bg-clip-text text-transparent text-7xl font-semibold">{item.description}</div>
+                <div className=" text-center text-white/90 text-base font-normal  leading-7">{item.title}</div>
+              </div>
+            ))}
+          </>
           {/* <div className="flex-col justify-start items-center inline-flex">
             <div className="bg-gradient-to-r from-[#fff]  to-[#5B95F9] bg-clip-text text-transparent text-7xl font-semibold">{data?.items[0]?.description}</div>
             <div className=" text-center text-white/90 text-base font-normal  leading-7">{data?.items[0]?.title}</div>
