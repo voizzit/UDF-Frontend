@@ -41,7 +41,7 @@ export default async function CustomPage({ params: { slug } }) {
   const data = await getPage(slug)
   const widgetData = data?.data?.widgets
   // if (!data) return notFound();
-  console.log(data,slug,"data");
+  // console.log(data,slug,"data");
   return (
     <main>
       <WidgetBlocks widgets={widgetData} />

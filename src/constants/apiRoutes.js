@@ -11,3 +11,5 @@ export const CONTACT_PAGE = "/api/contact-page?populate=widgets.cover,seo,widget
 export const PAGES = "/api/pages";
 export const BLOGS = "/api/articles";
 export const BLOG_PAGE = "/api/blog";
+// export const LEADER_PAGE = "/api/leaders-page?populate=widgets.cover"
+export const LEADER_PAGE = "/api/leaders-page?populate=widgets.cover,widgets.items.cover"
